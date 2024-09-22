@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buzzline</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <!-- Vertical Navbar -->
+        <nav
+          id="navbar"
+          class="col-1 navbar d-flex flex-column align-items-center py-3 contact-nav root"
+        >
+          <ul class="nav flex-column" id="nav">
+            <li class="nav-item my-3">
+              <a href="#" class="nav-link" id="chatBtn"
+                ><i class="fas fa-comments fa-lg"></i
+              ></a>
+            </li>
+            <li class="nav-item my-3">
+              <a href="#" class="nav-link"
+                ><i class="fas fa-users fa-lg"></i
+              ></a>
+            </li>
+            <li class="nav-item my-3">
+              <a href="#" class="nav-link" id="contactBtn"
+                ><i class="fas fa-address-book fa-lg"></i
+              ></a>
+            </li>
+            <li class="nav-item my-3">
+              <a href="#" class="nav-link"><i class="fas fa-cog fa-lg"></i></a>
+            </li>
+          </ul>
+          <div class="mt-auto">
+            <img
+              src="../user.png"
+              class="rounded-circle"
+              alt="Profile"
+              width="40"
+              height="40"
+              id="profilePhoto"
+            />
+          </div>
+        </nav>
+        <!-- Sidebar (Groups, Contacts, Chats) -->
+        <aside class="col-3 sidebar" id="sidebar">
+          <h6 class="text mt-auto" id="user">User</h6>
+
+          <div class="heading d-flex justify-content-between">
+            <h2 class="text mt-auto" id="username">Chats</h2>
+            <div class="dropdown">
+              <button
+                class="btn btn-custom dropdown-toggle"
+                type="button"
+                id="navbarDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="sidebarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="#" id="chatBtn"
+                    ><i class="fas fa-comments fa-lg"></i> Chats</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-users fa-lg"></i> Groups</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="contactBtn"
+                    ><i class="fas fa-address-book fa-lg"></i> Contacts</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-cog fa-lg"></i> Settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Chats"
+            />
+            <button class="input-group-text me-2">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <hr />
+          <div class="contact-main scroll-container">
+            <div class="contact-list" id="contactList">
+              <!-- Sample contact with unread messages -->
+              <div class="contact">
+                <img
+                  src="../user.png"
+                  class="rounded-circle me-2"
+                  alt="Contact"
+                  width="50"
+                  height="50"
+                />
+                <div>
+                  <h6 class="mb-0">John Doe</h6>
+                  <small>Last message...</small>
+                </div>
+                <span class="badge badge-unread">2</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Chat Window -->
+        <main class="col-8 chat-window d-none" id="chatWindow">
+          <!-- Chat Header -->
+          <header
+            class="d-flex justify-content-between lign-items-center p-2 chat-header"
+          >
+            <button class="btn btn-custom me-2" id="backBtn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="d-flex align-items-center">
+              <img
+                src="../user.png"
+                class="rounded-circle me-2"
+                alt="Contact"
+                width="50"
+                height="50"
+              />
+              <h5 class="mb-0">Contact Name</h5>
+            </div>
+            <div class="chat-actions chat-root">
+              <button class="btn btn-custom me-2" id="voiceCallBtn">
+                <i class="fas fa-phone"></i>
+              </button>
+              <button class="btn btn-custom" id="videoCallBtn">
+                <i class="fas fa-video"></i>
+              </button>
+            </div>
+            <div class="chat-actions chat-primary">
+              <!-- Dropdown button for call and video on small screens -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-custom dropdown-toggle"
+                  type="button"
+                  id="chatActionsDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="chatActionsDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-phone"></i> Call</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-video"></i> Video</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <!-- Chat Messages -->
+          <div class="chat-messages p-3 scroll-containe">
+            <!-- Receiver's Message -->
+            <div class="msgIn">
+              <div class="message received mb-3">Hey! How are you?</div>
+            </div>
+            <!-- Sender's Message -->
+            <div class="msgOut">
+              <div class="message sent mb-3">
+                I'm good, thank you! How about you? lor
+                <div class="msg-info">
+                  <span>4.55 am</span>
+                  <span class="fa-stack">
+                    <!-- <i class="fas fa-check fa-stack-1x"></i> -->
+                    <i class="fa-solid fa-check-double"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Chat Footer -->
+          <div class="chat-footer p-3 bg-white d-flex align-items-center">
+            <!-- Attachments -->
+            <div class="attachment-dropdown me-2 dropdown">
+              <!-- Button to trigger the dropdown -->
+              <button
+                class="btn-paperclip dropdown-toggle"
+                type="button"
+                id="attachmentDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-paperclip"></i>
+              </button>
+
+              <!-- Dropdown menu -->
+              <ul
+                class="dropdown-menu dropdown-menu-end document-content2"
+                aria-labelledby="attachmentDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-image"></i> Image</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-film"></i> Video</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-regular fa-file-lines"></i> Document</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Input Box -->
+            <input
+              type="text"
+              class="form-control me-2 inputMessage"
+              id="inputMessage"
+              placeholder="Type a message"
+            />
+            <button
+              class="btn-paper-plane"
+              id="btn-paper-plane"
+              aria-label="Send message"
+            >
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <!-- Send Voice Message -->
+            <button
+              class="btn-microphone"
+              id="btn-microphone"
+              aria-label="Record voice message"
+              ;
+            >
+              <i class="fas fa-microphone"></i>
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="video-container" id="callScreen">
+      <video id="localVideo" autoplay muted playsinline></video>
+      <video id="remoteVideo" autoplay playsinline></video>
+
+      <!-- Hang Up Button -->
+      <button id="hangUpBtn">
+        <i class="fas fa-phone-slash"></i>
+      </button>
+
+      <!-- Buttons to Mute Audio/Video -->
+      <button id="muteAudioBtn">
+        <i class="fas fa-microphone-slash"></i>
+      </button>
+      <button id="toggleVideoBtn">
+        <i class="fas fa-video-slash"></i>
+      </button>
+    </div>
+
+    <div class="Welcome" id="Welcome">
+      <h1>Welcome to Buzzline explore and connnect to the world</h1>
+    </div>
+
+    <div class="blur-background d-none" id="blackScreen"></div>
+    <!-- Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="script_02.js"></script>
+  </body>
+</html>

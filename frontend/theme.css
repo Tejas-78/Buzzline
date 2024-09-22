@@ -1,0 +1,551 @@
+body {
+  background-color: var(--body-bg-color); /* Using variable */
+  color: var(--body-text-color); /* Using variable */
+}
+
+.navbar {
+  background: var(--navbar-bg); /* Using variable */
+  box-shadow: 2px 5px 5px #121212;
+}
+
+.navbar .nav-link {
+  color: var(--navbar-text-color); /* Using variable */
+}
+
+.navbar .nav-link:hover {
+  color: var(--navbar-hover-color); /* Using variable */
+}
+
+.sidebar {
+  background: var(--sidebar-bg); /* Using variable */
+  box-shadow: inset -2px -3px 5px #121212;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  background: var(--sidebar-heading-gradient); /* Using variable */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chat-window {
+  background-color: var(--chat-window-bg-color); /* Using variable */
+}
+
+.chat-header {
+  background: var(--chat-header-bg); /* Using variable */
+}
+
+.chat-messages {
+  background: var(--chat-messages-bg); /* Using variable */
+}
+
+.chat-header h5 {
+  color: var(--chat-heading-color);
+}
+
+.message.sent {
+  background-color: var(--message-sent-bg); /* Using variable */
+  color: var(--message-sent-text); /* Using variable */
+}
+
+.message.received {
+  background-color: var(--message-received-bg); /* Using variable */
+  color: var(--message-received-text); /* Using variable */
+}
+
+.chat-footer {
+  background: var(--chat-footer-bg); /* Using variable */
+}
+
+.contact-list .contact:hover {
+  background-color: var(--contact-list-bg-hover); /* Using variable */
+}
+
+.contact-list h6 {
+  color: var(--contact-list-h6-color);
+}
+
+.contact-list .contact {
+  background-color: var(--contact-list-bg); /* Using variable */
+  border-bottom: 1px solid var(--contact-list-border-color); /* Using variable */
+  color: var(--contact-list-color);
+}
+
+.badge-unread {
+  background: var(--contact-badge-unread-bg); /* Using variable */
+}
+
+.attachment-dropdown .dropdown-content {
+  background-color: var(--attachment-dropdown-bg); /* Using variable */
+}
+
+.attachment-dropdown .dropdown-content a:hover {
+  background-color: var(--attachment-dropdown-item-hover-bg); /* Using variable */
+}
+
+.attachment-dropdown .dropdown-content a {
+  color: var(--attachment-dropdown-text-color); /* Using variable */
+}
+
+/* Scroll Container */
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-container-thumb-color); /* Using variable */
+}
+
+.btn-paperclip {
+  color: var(--paperclip-color);
+}
+
+.btn-microphone {
+  color: var(--microphone-color);
+}
+
+.form-control, .input-group-text {
+  background-color: var(--form-control-bg);
+}
+
+.btn-custom {
+  background: var(--btn-custom-bg);
+  color: var(--btn-custom-color);
+}
+
+#nav {
+  color: var(--navbar-text-color);
+}
+
+#nav:hover {
+  color: var(--navbar-hover-color);
+}
+
+input.form-control::placeholder {
+  color: var(--placeholder-color);
+}
+
+input:focus {
+  background-color: var(--input-active-bg);
+  border-color: var(--input-active-border);
+}
+
+.input-group-text {
+  background-color: var(--sidebar-search-btn-bg);
+  color: var(--sidebar-search-btn-color);
+}
+
+#sidebar .dropdown-item {
+  background-color: var(--dropdown-bg-color) !important;
+  color: var(--dropdown-text-color) !important;
+}
+
+#sidebar .dropdown-menu .dropdown-item:hover {
+  background-color: var(--dropdown-hover-bg-color) !important;
+}
+
+/* New Variables for Inputs */
+.search-input, .message-input {
+  background-color: var(--input-bg-color); /* Background color for inputs */
+  color: var(--input-text-color); /* Text color for inputs */
+  border: 1px solid var(--input-border-color); /* Border color for inputs */
+}
+
+.search-input:focus, .message-input:focus {
+  background-color: var(--input-active-bg); /* Background color on focus */
+  border-color: var(--input-active-border); /* Border color on focus */
+}
+
+:root {
+  /* General Background Colors */
+  --body-bg-color: #1c1c1c; /* Darker background for a dark theme */
+  --body-text-color: #e0e0e0; /* Light grey for contrast on dark background */
+
+  /* Navbar */
+  --navbar-bg: linear-gradient(100deg, #2b2b2b, #1a1a1a); /* Dark gradient for navbar */
+  --navbar-text-color: #ffffff; /* White text for navbar */
+  --navbar-hover-color: #565656; /* Lighter grey for hover effect */
+
+  /* Sidebar */
+  --sidebar-bg: linear-gradient(50deg, #2a2a2a, #1a1a1a); /* Dark gradient for sidebar */
+  --sidebar-text-color: #e0e0e0; /* Light grey for sidebar text */
+  --sidebar-heading-gradient: linear-gradient(150deg, #5f5f5f, #969494); /* Grey gradient for sidebar headings */
+
+  /* Scrollbar */
+  --scrollbar-track-color: #333333; /* Darker scrollbar track */
+  --scrollbar-thumb-color: #5a5a5a; /* Grey scrollbar thumb */
+  --scrollbar-thumb-hover: linear-gradient(100deg, #4a4a4a, #3a3a3a); /* Grey gradient for scrollbar on hover */
+
+  /* Chat Window */
+  --chat-heading-color: #a5a4a4; /* Dark grey for chat heading */
+  --chat-window-bg-color: #242424; /* Dark background for chat window */
+  --chat-header-bg: linear-gradient(200deg, #2b2b2b, #1a1a1a); /* Dark gradient for chat header */
+  --chat-messages-bg: linear-gradient(300deg, #222222, #1b1b1b); /* Darker gradient for chat messages */
+
+  /* Chat Bubbles */
+  --message-sent-bg: #333333; /* Dark grey for sent messages */
+  --message-sent-text: #ffffff; /* White text in sent messages */
+  --message-received-bg: #2a2a2a; /* Darker grey for received messages */
+  --message-received-text: #ffffff; /* White text for received messages */
+
+  /* Chat Footer */
+  --chat-footer-bg: linear-gradient(200deg, #2b2b2b, #1a1a1a); /* Dark footer background */
+
+  /* Contact List */
+  --contact-list-bg-hover: #333333; /* Darker grey on hover */
+  --contact-list-bg: #2a2a2a; /* Dark background for contact list */
+  --contact-list-border-color: #1a1a1a; /* Black border for contacts */
+  --contact-list-color: #e0e0e0; /* Light grey for contact text */
+  --contact-list-h6-color: #b6b2b2; /* Dark grey for headings */
+  --contact-badge-unread-bg: linear-gradient(200deg, #3a3a3a, #4a4a4a); /* Dark gradient for unread badge */
+
+  /* Dropdown */
+  --dropdown-bg-color: #7f6f6f; /* Background color for dropdown */
+  --dropdown-text-color: #c4c0c0; /* Text color for dropdown */
+  --dropdown-hover-bg-color: #252525; /* Background color on hover */
+
+  /* Attachment Dropdown */
+  --attachment-dropdown-bg: #df2626; /* Same dark grey as dropdown */
+  --attachment-dropdown-item-hover-bg: #756d6d; /* Dark grey on hover */
+  --attachment-dropdown-text-color: #e0e0e0; /* Light grey text for attachment dropdown */
+
+  /* Scroll Container */
+  --scroll-container-thumb-color: #5a5a5a; /* Matches scrollbar thumb */
+
+  /* Buttons, Inputs, and Links */
+  --paperclip-color: #8a8989; /* Dark grey for icons */
+  --form-control-bg: #2a2a2a; /* Dark background for inputs */
+  --microphone-color: #9e9e9e; /* Grey microphone icon */
+  --btn-custom-bg: linear-gradient(200deg, #3a3a3a, #4a4a4a); /* Dark gradient for buttons */
+  --btn-custom-color: #ffffff; /* White text on buttons */
+  --nav-a-color: #e0e0e0; /* Light grey for navigation links */
+  --nav-a-hover-color: #c0c0c0; /* Slightly lighter grey on hover */
+
+  /* Vertical Navbar */
+  --vertical-navbar-bg: linear-gradient(180deg, #2a2a2a, #1a1a1a); /* Dark gradient for vertical navbar */
+  --vertical-navbar-text-color: #e0e0e0; /* Light grey for text */
+  --vertical-navbar-hover-bg: #3a3a3a; /* Dark grey on hover */
+  --vertical-navbar-icon-color: #9e9e9e; /* Light grey for icons */
+  --vertical-navbar-icon-hover-color: #ffffff; /* White icons on hover */
+
+  /* Placeholder Color */
+  --placeholder-color: #f1eeee; /* Customize this value */
+
+  /* Input Active State */
+  --input-active-bg: #2b2b2b; /* Background color for active input */
+  --input-active-border: #4a4a4a; /* Border color for active input */
+
+  /* Sidebar Search Button */
+  --sidebar-search-btn-bg: #3a3a3a; /* Background color for search button */
+  --sidebar-search-btn-color: #ffffff; /* Text color for search button */
+
+  /* Dropdowns */
+  --dropdown-bg-color: #2b2b2b; /* Background color for dropdown */
+  --dropdown-text-color: #ffffff; /* Text color for dropdown */
+  --dropdown-hover-bg-color: #3a3a3a; /* Background color on hover */
+  
+  /* Search and Message Input */
+  --input-bg-color: #2a2a2a; /* Background color for search and message inputs */
+  --input-text-color: #e0e0e0; /* Text color for search and message inputs */
+  --input-border-color: #3a3a3a; /* Border color for search and message inputs */
+}
+
+.theme-dark-grey {
+  /* General Background Colors */
+  --body-bg-color: #121212;
+  --body-text-color: #e0e0e0;
+
+  /* Navbar */
+  --navbar-bg: linear-gradient(100deg, rgb(20, 20, 20), rgb(128, 125, 125));
+  --navbar-text-color: #e0e0e0;
+  --navbar-hover-color: #bbbbbb;
+
+  /* Sidebar */
+  --sidebar-bg: linear-gradient(50deg, rgb(37, 37, 37), rgb(87, 84, 84));
+  --sidebar-text-color: #e0e0e0;
+  --sidebar-heading-gradient: linear-gradient(150deg, rgb(206, 202, 202), rgb(167, 164, 164));
+
+  /* Scrollbar */
+  --scrollbar-track-color: rgb(77, 76, 76);
+  --scrollbar-thumb-color: rgb(128, 125, 125);
+  --scrollbar-thumb-hover: linear-gradient(100deg, rgb(20, 20, 20), rgb(128, 125, 125));
+
+  /* Chat Window */
+  --chat-header-bg: linear-gradient(200deg, rgb(31, 30, 30), rgb(121, 116, 116));
+  --chat-messages-bg: linear-gradient(300deg, rgb(29, 28, 28), rgb(56, 54, 54));
+
+  /* Chat Bubbles */
+  --message-sent-bg: #818183;
+  --message-sent-text: white;
+  --message-received-bg: #706e6e;
+  --message-received-text: #e0e0e0;
+
+  /* Chat Footer */
+  --chat-footer-bg: linear-gradient(200deg, rgb(31, 30, 30), rgb(121, 116, 116));
+  
+  /* Contact List */
+  --contact-list-color: #c8c8c9;
+  --contact-list-h6-color: #d7d7da;
+
+  --contact-list-bg-hover: #404042;
+  --contact-list-bg: #6f6f74;
+  --contact-list-border-color: #2a2a2c;
+  --contact-badge-unread-bg: linear-gradient(200deg, rgb(77, 77, 77), rgb(70, 69, 69));
+
+  /* Dropdown */
+  --dropdown-bg: #333333;
+  --dropdown-item-hover-bg: #4a4a4a;
+  --dropdown-text-color: #e0e0e0;
+
+  /* Scroll Container */
+  --scroll-container-thumb-color: #888;
+
+  --paperclip-color:#e4e1e1;
+  --form-control-bg:#bbbbbb;
+  --microphone-color: #aca9a9;
+  --btn-custom-bg:linear-gradient(200deg,rgb(117, 117, 117),rgb(70, 69, 69));
+  --btn-custom-color:#e6e5e5;
+  --nav-a-color:#d1cfcf;
+  --nav-a-hover-color:#6d6d6e;
+
+}
+/*************  */
+
+.theme-blue-violet {
+  /* General Background Colors */
+  --body-bg-color: #1e1f3b; /* Deep blue background */
+  --body-text-color: #f0f0ff; /* Light text for contrast */
+
+  /* Navbar */
+  --navbar-bg: linear-gradient(100deg, #3b3f76, #5c5ca1); /* Blue to violet gradient */
+  --navbar-text-color: #f0f0ff; /* Light text on dark background */
+  --navbar-hover-color: #d0cfff; /* Lighter violet on hover */
+
+  /* Sidebar */
+  --sidebar-bg: linear-gradient(50deg, #414369, #5f5fa3); /* Dark blue/violet gradient */
+  --sidebar-text-color: #f0f0ff; /* Light text for readability */
+  --sidebar-heading-gradient: linear-gradient(150deg, #bcbcff, #9696ff); /* Soft violet for headings */
+
+  /* Scrollbar */
+  --scrollbar-track-color: #4b4c80; /* Muted blue */
+  --scrollbar-thumb-color: #6e6eb2; /* Brighter violet */
+  --scrollbar-thumb-hover: linear-gradient(100deg, #3b3f76, #5c5ca1); /* Matches navbar gradient */
+
+  /* Chat Window */
+  --chat-window-bg-color: #24254a; /* Darker blue for chat background */
+  --chat-header-bg: linear-gradient(200deg, #343463, #525297); /* Blue to violet gradient */
+  --chat-messages-bg: linear-gradient(300deg, #282861, #3e3e9c); /* Deeper violet gradient */
+
+  /* Chat Bubbles */
+  --message-sent-bg: #50507e; /* Blue-violet for sent messages */
+  --message-sent-text: #f0f0ff; /* Light text for contrast */
+  --message-received-bg: #6b6bbf; /* Lighter violet for received messages */
+  --message-received-text: #f0f0ff; /* Light text for readability */
+
+  /* Chat Footer */
+  --chat-footer-bg: linear-gradient(200deg, #343463, #525297); /* Matches chat header gradient */
+  
+  /* Contact List */
+  --contact-list-bg-hover: #5151a8; /* Lighter violet for hover */
+  --contact-list-bg: #3d3d6f; /* Deep blue-violet for contact list */
+  --contact-list-border-color: #2a2a4a; /* Darker violet border */
+  --contact-list-color: #d0d0ff; /* Light text for contacts */
+  --contact-list-h6-color: #c0c0ff; /* Light violet for headings */
+  --contact-badge-unread-bg: linear-gradient(200deg, #5c5ca1, #9696ff); /* Violet gradient for unread badge */
+
+  /* Dropdown */
+  --dropdown-bg: #2f2f63; /* Dark violet for dropdown background */
+  --dropdown-item-hover-bg: #4b4b92; /* Lighter blue-violet on hover */
+  --dropdown-text-color: #f0f0ff; /* Light text for dropdown */
+
+  /* Attachment Dropdown */
+  --attachment-dropdown-bg: #2f2f63; /* Same as dropdown */
+  --attachment-dropdown-item-hover-bg: #4b4b92; /* Same hover color */
+  --attachment-dropdown-text-color: #f0f0ff; /* Light text */
+
+  /* Scroll Container */
+  --scroll-container-thumb-color: #6e6eb2; /* Matches scrollbar */
+
+  /* Buttons, Inputs, and Links */
+  --paperclip-color: #8c8cff; /* Soft blue for icons */
+  --form-control-bg: #4b4c80; /* Blue for form input background */
+  --microphone-color: #9696ff; /* Violet microphone icon */
+  --btn-custom-bg: linear-gradient(200deg, #5c5ca1, #9696ff); /* Blue-violet gradient for buttons */
+  --btn-custom-color: #f0f0ff; /* Light text on buttons */
+  --nav-a-color: #c0c0ff; /* Soft violet for navigation links */
+  --nav-a-hover-color: #d0d0ff; /* Lighter on hover */
+
+  /* Vertical Navbar */
+  --vertical-navbar-bg: linear-gradient(180deg, #2a2a50, #3a3a7a); /* Blue to violet gradient for the navbar */
+  --vertical-navbar-text-color: #d0d0ff; /* Light text color */
+  --vertical-navbar-hover-bg: #4b4b92; /* Lighter violet on hover */
+  --vertical-navbar-icon-color: #bcbcff; /* Soft violet for icons */
+  --vertical-navbar-icon-hover-color: #f0f0ff; /* White icon on hover */
+}
+
+.theme-fresh {
+  /* General Background Colors */
+  --body-bg-color: #f0f9f7; /* Light mint green background for freshness */
+  --body-text-color: #2a3d34; /* Darker green for text to contrast the light background */
+
+  /* Navbar */
+  --navbar-bg: linear-gradient(100deg, #9fe2d4, #82d2c0); /* Light green gradient */
+  --navbar-text-color: #ffffff; /* White text for clean look */
+  --navbar-hover-color: #c6f3e6; /* Lighter mint on hover */
+
+  /* Sidebar */
+  --sidebar-bg: linear-gradient(50deg, #b3e5db, #87d6c3); /* Light green/blue gradient for sidebar */
+  --sidebar-text-color: #2a3d34; /* Darker green for contrast */
+  --sidebar-heading-gradient: linear-gradient(150deg, #87b2d6, #3ea8ee); /* Soft blue/green for headings */
+
+  /* Scrollbar */
+  --scrollbar-track-color: #d5f2ed; /* Soft blue-green */
+  --scrollbar-thumb-color: #87d6c3; /* Fresh mint green */
+  --scrollbar-thumb-hover: linear-gradient(100deg, #9fe2d4, #82d2c0); /* Matches navbar gradient */
+
+  /* Chat Window */
+  --chat-heading-color:rgb(44, 132, 184);
+  --chat-window-bg-color: #eaf8f4; /* Soft white/green for chat background */
+  --chat-header-bg: linear-gradient(200deg, #99ded0, #68cbb0); /* Fresh green header */
+  --chat-messages-bg: linear-gradient(300deg, #def8f3, #c9f1e6); /* Light, fresh gradient */
+
+  /* Chat Bubbles */
+  --message-sent-bg: #8de0c3; /* Light mint for sent messages */
+  --message-sent-text: #ffffff; /* White text */
+  --message-received-bg: #72d6b1; /* Light green for received messages */
+  --message-received-text: #ffffff; /* Darker green text */
+
+  /* Chat Footer */
+  --chat-footer-bg: linear-gradient(200deg, #99ded0, #68cbb0); /* Fresh green footer */
+  
+  /* Contact List */
+  --contact-list-bg-hover: #c7f0e2; /* Lighter mint on hover */
+  --contact-list-bg: #e4faf4; /* Soft white for contact list */
+  --contact-list-border-color: #aadcd1; /* Light green border */
+  --contact-list-color: #2a3d34; /* Dark green for text */
+  --contact-list-h6-color: #68cbb0; /* Light teal for headings */
+  --contact-badge-unread-bg: linear-gradient(200deg, #68cbb0, #9fe2d4); /* Fresh green gradient for unread badge */
+
+  /* Dropdown */
+  --dropdown-bg: #b3e5db; /* Light green dropdown background */
+  --dropdown-item-hover-bg: #9fe2d4; /* Fresh mint on hover */
+  --dropdown-text-color: #2a3d34; /* Dark green text for dropdown */
+
+  /* Attachment Dropdown */
+  --attachment-dropdown-bg: #b3e5db; /* Same light green as dropdown */
+  --attachment-dropdown-item-hover-bg: #9fe2d4; /* Fresh mint on hover */
+  --attachment-dropdown-text-color: #2a3d34; /* Dark green text */
+
+  /* Scroll Container */
+  --scroll-container-thumb-color: #87d6c3; /* Matches scrollbar */
+
+  /* Buttons, Inputs, and Links */
+  --paperclip-color: #5c86f8; /* Fresh teal for icons */
+  --form-control-bg: #e4faf4; /* Light mint background for inputs */
+  --microphone-color: #437efd; /* Light green microphone icon */
+  --btn-custom-bg: linear-gradient(200deg, #82d2c0, #60bca0); /* Fresh green gradient for buttons */
+  --btn-custom-color: #ffffff; /* White text on buttons */
+  --nav-a-color: #68cbb0; /* Light teal for navigation links */
+  --nav-a-hover-color: #98d7c1; /* Slightly darker on hover */
+
+  /* Vertical Navbar */
+  --vertical-navbar-bg: linear-gradient(180deg, #b3e5db, #9fe2d4); /* Light green gradient for the navbar */
+  --vertical-navbar-text-color: #2a3d34; /* Dark green text */
+  --vertical-navbar-hover-bg: #9fe2d4; /* Light mint on hover */
+  --vertical-navbar-icon-color: #60bca0; /* Soft teal for icons */
+  --vertical-navbar-icon-hover-color: #ffffff; /* White icon on hover */
+}
+
+
+.theme-light {
+  /* General Background Colors */
+  --body-bg-color: #f0f0f0; /* Light background for light theme */
+  --body-text-color: #333333; /* Darker text color for contrast on light background */
+
+  /* Navbar */
+  --navbar-bg: linear-gradient(100deg, #ffffff, #e0e0e0); /* Light gradient for navbar */
+  --navbar-text-color: #333333; /* Dark text for navbar */
+  --navbar-hover-color: #4a4a4a; /* Darker grey for hover effect */
+
+  /* Sidebar */
+  --sidebar-bg: linear-gradient(50deg, #ffffff, #e0e0e0); /* Light gradient for sidebar */
+  --sidebar-text-color: #333333; /* Dark text for sidebar */
+  --sidebar-heading-gradient: linear-gradient(150deg, #4d4c4c, #464444); /* Light gradient for sidebar headings */
+
+  /* Scrollbar */
+  --scrollbar-track-color: #e0e0e0; /* Lighter scrollbar track */
+  --scrollbar-thumb-color: #b0b0b0; /* Light grey scrollbar thumb */
+  --scrollbar-thumb-hover: linear-gradient(100deg, #c0c0c0, #b0b0b0); /* Light grey gradient for scrollbar on hover */
+
+  /* Chat Window */
+  --chat-heading-color: #4a4a4a; /* Dark grey for chat heading */
+  --chat-window-bg-color: #ffffff; /* White background for chat window */
+  --chat-header-bg: linear-gradient(200deg, #f0f0f0, #e0e0e0); /* Light gradient for chat header */
+  --chat-messages-bg: linear-gradient(300deg, #f9f9f9, #e9e9e9); /* Lighter gradient for chat messages */
+
+  /* Chat Bubbles */
+  --message-sent-bg: #e0e0e0; /* Light grey for sent messages */
+  --message-sent-text: #333333; /* Dark text in sent messages */
+  --message-received-bg: #f5f5f5; /* Very light grey for received messages */
+  --message-received-text: #333333; /* Dark text in received messages */
+
+  /* Chat Footer */
+  --chat-footer-bg: linear-gradient(200deg, #f0f0f0, #e0e0e0); /* Light footer background */
+
+  /* Contact List */
+  --contact-list-bg-hover: #d0d0d0; /* Lighter grey on hover */
+  --contact-list-bg: #f9f9f9; /* Very light background for contact list */
+  --contact-list-border-color: #e0e0e0; /* Light border for contacts */
+  --contact-list-color: #333333; /* Dark text for contact list */
+  --contact-list-h6-color: #4a4a4a; /* Dark grey for headings */
+  --contact-badge-unread-bg: linear-gradient(200deg, #c0c0c0, #d0d0d0); /* Light gradient for unread badge */
+
+  /* Dropdown */
+  --dropdown-bg-color: #f0f0f0; /* Light background for dropdown */
+  --dropdown-text-color: #333333; /* Dark text for dropdown */
+  --dropdown-hover-bg-color: #e0e0e0; /* Background color on hover */
+
+  /* Attachment Dropdown */
+  --attachment-dropdown-bg: #f0f0f0; /* Same light grey as dropdown */
+  --attachment-dropdown-item-hover-bg: #e0e0e0; /* Light grey on hover */
+  --attachment-dropdown-text-color: #333333; /* Dark text for attachment dropdown */
+
+  /* Scroll Container */
+  --scroll-container-thumb-color: #b0b0b0; /* Matches scrollbar thumb */
+
+  /* Buttons, Inputs, and Links */
+  --paperclip-color: #4a4a4a; /* Dark grey for icons */
+  --form-control-bg: #ffffff; /* White background for inputs */
+  --microphone-color: #4a4a4a; /* Dark grey microphone icon */
+  --btn-custom-bg: linear-gradient(200deg, #c7c5c5, #cac6c6); /* Light gradient for buttons */
+  --btn-custom-color: #333333; /* Dark text on buttons */
+  --nav-a-color: #333333; /* Dark grey for navigation links */
+  --nav-a-hover-color: #4a4a4a; /* Slightly darker grey on hover */
+
+  /* Vertical Navbar */
+  --vertical-navbar-bg: linear-gradient(180deg, #ffffff, #e0e0e0); /* Light gradient for vertical navbar */
+  --vertical-navbar-text-color: #333333; /* Dark text for vertical navbar */
+  --vertical-navbar-hover-bg: #d0d0d0; /* Light grey on hover */
+  --vertical-navbar-icon-color: #4a4a4a; /* Dark grey for icons */
+  --vertical-navbar-icon-hover-color: #333333; /* Dark icons on hover */
+
+  /* Placeholder Color */
+  --placeholder-color: #7a7a7a; /* Medium grey for placeholder text */
+
+  /* Input Active State */
+  --input-active-bg: #e0e0e0; /* Background color for active input */
+  --input-active-border: #b0b0b0; /* Border color for active input */
+
+  /* Sidebar Search Button */
+  --sidebar-search-btn-bg: #d0d0d0; /* Background color for search button */
+  --sidebar-search-btn-color: #333333; /* Text color for search button */
+
+  /* Dropdowns */
+  --dropdown-bg-color: #f0f0f0; /* Background color for dropdown */
+  --dropdown-text-color: #333333; /* Text color for dropdown */
+  --dropdown-hover-bg-color: #e0e0e0; /* Background color on hover */
+  
+  /* Search and Message Input */
+  --input-bg-color: #ffffff; /* Background color for search and message inputs */
+  --input-text-color: #333333; /* Text color for search and message inputs */
+  --input-border-color: #d0d0d0; /* Border color for search and message inputs */
+}
+
