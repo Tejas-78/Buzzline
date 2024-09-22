@@ -1,5 +1,5 @@
 
-import server from '../BuzzLine/backend/server.js'
+import server from './backend/server.js';
 import {connect} from '../BuzzLine/backend/config.js'
 
 server.listen(3000,()=>{
